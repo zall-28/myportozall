@@ -1,0 +1,305 @@
+*,html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color:#1a2238;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 80px;
+}
+
+
+.tulisan-porto {
+    margin-right: auto;
+    display: flex;
+   margin-left: 15px;
+    color: white;
+}
+
+
+nav {
+    background-color: #1a2238; /* Warna latar belakang navbar */
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    margin-right: 20px; /* Jarak antara menu */
+    padding: 10px;
+    color: white; /* Warna teks */
+    position: relative; /* Menetapkan posisi relatif untuk menyertakan border-bottom */
+    transition: color 0.5s ease; /* Efek transisi warna saat hover */
+}
+
+li:hover {
+    color: orange; /* Warna teks saat dihover */
+}
+
+li:hover::after {
+    content: ''; /* Membuat elemen pseudo untuk garis bawah */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Tinggi garis bawah */
+    background-color: white; /* Warna garis bawah */
+}
+
+
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  article {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  article h2 {
+    color: #333;
+    font-size: 1.8em;
+  }
+  
+  article p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 1.2em;
+  }
+  
+  aside {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  aside img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 50%; 
+    margin-bottom: 20px; */
+  }
+  
+  aside h3, aside p {
+    color: #333;
+  }
+  
+
+  .quote-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    color:#333;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .bg-kontak {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  .medsos {
+    padding-top: 200px;
+    font-size: 50px;
+  }
+  
+  .icon-kontak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: solid;
+    padding-top: 10px;
+  }
+  
+  .icon-kontak a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 100px;
+  }
+  
+  .icon-kontak a:hover {
+    color: orange;
+  }
+
+
+
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1a2238;
+    color: white;
+}
+
+
+/* sedikit Responsif untuk hp );*/
+@media (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    .tulisan-porto {
+        margin: 10px; /* Sesuaikan margin agar lebih rapi */
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    article,
+    aside {
+        max-width: 100%;
+    }
+
+    aside img {
+        width: 100%;
+        height: auto; /* Mengembalikan rasio aspek gambar */
+    }
+
+    aside h3,
+    aside p {
+        font-size: 1em; /* Menyesuaikan ukuran tulisan pada aside */
+    }
+
+    .quote {
+        padding: 10px;
+    }
+
+    .bg-kontak {
+        height: auto;
+    }
+
+    .kontak {
+        font-size: 24px; /* Menyesuaikan ukuran teks kontak */
+        padding-top: 30px;
+        padding-bottom: 5px;
+    }
+
+    .icon-kontak {
+        font-size: 80px; /* Menyesuaikan ukuran ikon kontak */
+        padding-bottom: 30px;
+    }
+
+    footer {
+        font-size: 14px; /* Menyesuaikan ukuran teks footer */
+    }
+}
+
+
+/* sedikit responsif untuk tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        height: auto;
+    }
+
+    .tulisan-porto {
+        margin: 10px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    ul {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    li {
+        margin: 0 20px;
+    }
+
+    main {
+        flex-direction: row;
+        padding: 50px;
+    }
+
+    article,
+    aside {
+        max-width: 50%;
+    }
+
+    aside img {
+        width: 100%;
+        height: auto;
+    }
+
+    aside h3,
+    aside p {
+        font-size: 1.5em;
+    }
+
+    .quote {
+        padding: 10px;
+    }
+
+    .bg-kontak {
+        height: auto;
+    }
+
+    .kontak {
+        font-size: 24px;
+        padding-top: 50px;
+    }
+
+    .icon-kontak {
+        font-size: 80px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
